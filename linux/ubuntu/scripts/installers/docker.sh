@@ -12,6 +12,6 @@ echo \
   sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 apt-get update
 
-sudo apt-get install docker-ce-cli docker-buildx-plugin docker-compose-plugin
+sudo apt-get -y install docker-ce-cli docker-buildx-plugin docker-compose-plugin
 
 printf "\n\t🐋 Installed Docker 🐋\t\n"
