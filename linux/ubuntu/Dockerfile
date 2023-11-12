@@ -3,6 +3,7 @@ ARG FROM_TAG
 FROM ${FROM_IMAGE}:${FROM_TAG}
 
 ARG ASSEMBLY=default
+ARG DISTRO
 
 # > Force apt to not be interactive/not ask
 ENV DEBIAN_FRONTEND=noninteractive \
