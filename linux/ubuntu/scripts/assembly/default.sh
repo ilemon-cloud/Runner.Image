@@ -1,5 +1,5 @@
 #!/bin/bash
-base_dir="$(dirname "$0")/../"
+base_dir="$(dirname "$0")/.."
 
 # shellcheck source=./../helpers/function.sh
 source "$base_dir/helpers/function.sh"
