@@ -2,6 +2,8 @@
 printf "\n\t🐋 Installing packages 🐋\t\n"
 packages=(
   apt-utils
+  inetutils-ping
+  dnsutils
   ssh
   gawk
   curl
