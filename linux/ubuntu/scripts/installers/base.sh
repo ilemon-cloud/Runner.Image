@@ -4,6 +4,9 @@ packages=(
   apt-utils
   inetutils-ping
   dnsutils
+  iproute2
+  net-tools
+  traceroute
   ssh
   gawk
   curl
