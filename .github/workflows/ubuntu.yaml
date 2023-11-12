@@ -61,7 +61,7 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v5
         with:
-          platforms: ${{ matrix.platform }}
+          platforms: ${{ steps.platforms.outputs.matrix }}
           context: linux/ubuntu/
           pull: true
           push: true
