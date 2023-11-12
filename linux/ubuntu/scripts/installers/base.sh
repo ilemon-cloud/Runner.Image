@@ -1,6 +1,7 @@
 #!/bin/bash -e
 printf "\n\t🐋 Installing packages 🐋\t\n"
 packages=(
+  apt-utils
   ssh
   gawk
   curl
