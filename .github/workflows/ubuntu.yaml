@@ -37,7 +37,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v5
         with:
-          images: docker.io/lipg/act
+          images: docker.io/lipg/runner
           tags: |
             type=semver,prefix=ubuntu-
             type=sha,prefix=ubuntu-
