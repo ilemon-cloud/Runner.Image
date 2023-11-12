@@ -23,6 +23,7 @@ packages=(
 )
 
 apt-get -yq update
+apt-get -yq full-upgrade
 apt-get -yq install --no-install-recommends --no-install-suggests "${packages[@]}"
 
 ln -s "$(which python3)" "/usr/local/bin/python"
@@ -32,12 +33,14 @@ apt-get update
 apt-get install -y git
 git --version
 git config --system --add safe.directory '*'
+
 wget https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh -qO- | bash
 apt-get update
 apt-get install -y git-lfs
 
 # Remove '"' so it can be sourced by sh/bash
 sed 's|"||g' -i "/etc/environment"
+
 {
   echo "AGENT_TOOLSDIRECTORY=${AGENT_TOOLSDIRECTORY}"
   echo "RUN_TOOL_CACHE=${AGENT_TOOLSDIRECTORY}"
