@@ -41,7 +41,7 @@ jobs:
         with:
           images: docker.io/lipg/runner
           tags: |
-            type=ref,event=branch,prefix=ubuntu-
+            type=ref,event=branch,prefix=ubuntu-,enable={{!is_default_branch}}
             type=ref,event=tag,prefix=ubuntu-
             type=ref,event=pr,prefix=ubuntu-
             type=sha,prefix=ubuntu-
