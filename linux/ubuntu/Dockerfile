@@ -14,7 +14,7 @@ SHELL [ "/bin/bash", "--login", "-e", "-o", "pipefail", "-c" ]
 COPY ./scripts /data/installers
 
 RUN cd /data/installers ;\
-	bash assembly/$ASSEMBLY.sh ;\
+	bash -e assembly/$ASSEMBLY.sh ;\
     rm -rfv /data/installers
 
 WORKDIR /data
