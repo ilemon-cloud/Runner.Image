@@ -71,6 +71,6 @@ jobs:
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
           build-args: |
-            FORM_IMAGE=ubuntu
+            FROM_IMAGE=ubuntu
             FROM_TAG=${{ matrix.tag }}
             ASSEMBLY=${{ matrix.assembly }}
