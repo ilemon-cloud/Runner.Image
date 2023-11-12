@@ -24,10 +24,6 @@ jobs:
       fail-fast: true
       max-parallel: 4
       matrix:
-        platform:
-          - linux/amd64
-          - linux/arm64
-          - linux/arm/v7
         tag:
           - '23.10'
         assembly:
