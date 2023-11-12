@@ -6,7 +6,7 @@ on:
       - '.github/workflows/ubuntu.yml'
       - 'linux/ubuntu/**'
     branches:
-      - 'master'
+      - 'main'
   pull_request:
     paths:
       - '.github/workflows/ubuntu.yml'
