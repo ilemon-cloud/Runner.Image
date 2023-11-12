@@ -5,8 +5,6 @@ on:
     paths:
       - '.github/workflows/ubuntu.yml'
       - 'linux/ubuntu/**'
-    branches:
-      - 'main'
   pull_request:
     paths:
       - '.github/workflows/ubuntu.yml'
@@ -39,7 +37,9 @@ jobs:
         with:
           images: docker.io/lipg/runner
           tags: |
-            type=semver,prefix=ubuntu-
+            type=ref,event=branch,prefix=ubuntu-
+            type=ref,event=tag,prefix=ubuntu-
+            type=ref,event=pr,prefix=ubuntu-
             type=sha,prefix=ubuntu-
             type=schedule,pattern={{date 'YYYYMMDD-hhmmss' tz='Asia/Shshanghai'}},prefix=ubuntu-
             type=raw,value=latest,enable={{is_default_branch}},prefix=ubuntu-
