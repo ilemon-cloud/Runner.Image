@@ -35,7 +35,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v5
         with:
-          images: docker.io/lipg/runner
+          images: docker.io/lipg/runner,docker.io/lipangeng/runner
           tags: |
             type=ref,event=branch,prefix=ubuntu-
             type=ref,event=tag,prefix=ubuntu-
