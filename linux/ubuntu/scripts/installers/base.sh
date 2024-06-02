@@ -25,6 +25,7 @@ packages=(
   python3-pip
   python3-venv
   pipx
+  make
 )
 
 apt-get -yq update
