@@ -2,7 +2,13 @@ ARG FROM_IMAGE
 ARG FROM_TAG
 FROM ${FROM_IMAGE}:${FROM_TAG}
 
-RUN locale-gen en_US.UTF-8
+RUN set -eux ;\
+	apt-get update ;\
+    apt-get install -y locales ;\
+    echo 'en_US.UTF-8' >> /etc/locale.gen ;\
+    /usr/sbin/locale-gen ;\
+	update-locale LANG=en_US.UTF-8
+
 
 ENV LANG=en_US.UTF-8 \
 	LANGUAGE=en_US.UTF-8 \
