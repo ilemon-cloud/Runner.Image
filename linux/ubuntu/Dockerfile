@@ -5,9 +5,12 @@ FROM ${FROM_IMAGE}:${FROM_TAG}
 RUN set -eux ;\
 	apt-get update ;\
     apt-get install -y locales ;\
-    echo 'en_US.UTF-8' >> /etc/locale.gen ;\
+    echo 'en_US.UTF-8 UTF-8' >> /etc/locale.gen ;\
     /usr/sbin/locale-gen ;\
-	update-locale LANG=en_US.UTF-8
+	update-locale LANG=en_US.UTF-8 ;\
+	\
+    apt-get clean ;\
+    rm -rf /var/lib/apt/lists/*
 
 
 ENV LANG=en_US.UTF-8 \
